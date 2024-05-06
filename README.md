@@ -6,6 +6,9 @@ For portfolio of rails
 - 【rails環境構築】docker + rails + mysql で環境構築（初心者でも30分で完了！）
 - https://www.youtube.com/watch?v=Fq1PH0Gwi8I
 
+- Ruby on Rails 6のDocker環境構築
+- https://zenn.dev/yuma_ito_bd/scraps/1adb89dfe0661c
+
 
 
 ## version

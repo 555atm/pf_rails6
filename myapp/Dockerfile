@@ -6,8 +6,11 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 ## 「-qqオプション」はエラー以外何も吐かないことを意味する。
 ## 「-y」オプションは全部yesで実行することを意味する。
 
-# install nodejs(LTS)
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
+# install nodejs(LTS)　※もちろんlts.xじゃだめ
+RUN curl -fsSL https://deb.nodesource.com/setup_lts | bash - && apt-get install -y nodejs
+# または　https://deb.nodesource.com/
+# RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+# RUN sudo apt-get install -y nodejs
 
 # install yarn
 RUN npm install --global yarn
