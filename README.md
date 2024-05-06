@@ -9,9 +9,13 @@ For portfolio of rails
 
 
 ## version
-mysql 8.0
-ruby 3.2.3
-rails 6.1
+- mysql 8.0
+- ruby 3.2.3
+- rails 6.1
+- yarn
+- webpacker
+- node.js
+
 
 
 ### rails 5.2.2だとエラーになる
