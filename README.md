@@ -40,10 +40,15 @@ https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html
 
 
 
-
-
-
-
+↓
+docker-compose run web rails new . --force --database=mysql
+を実行すると、
+いろいろ試したけど
+Yarnがインストールできない。以下エラーが解消できない
+```
+Yarn not installed. Please download and install Yarn from https://yarnpkg.com/lang/en/docs/install/
+Exiting!
+```
 
 
 
