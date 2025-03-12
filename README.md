@@ -20,7 +20,6 @@ For portfolio of rails
 - node.js
 
 
-
 ### rails 5.2.2だとエラーになる
 ↓
 エラーの内容を見ると、ArgumentError が発生しており、
