@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: pf-rails template for VPC
+
+Parameters:
+  Project:
+    Type: String
+    Default: pf-001
+  AZ1:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: ap-northeast-1a
+  AZ2:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: ap-northeast-1c
+
+
+Resources:
+# ------------------------------------------------------------#
+#  VPC
+# ------------------------------------------------------------#
+  CFnVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      InstanceTenancy: default
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: !Sub ${Project}-vpc
+
+
+
