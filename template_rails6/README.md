@@ -1,5 +1,10 @@
-# pf_rails
-For portfolio of rails
+# template_rails
+For template of rails6
+
+## 進捗状況
+
+- 確か、エラーが出て止まっている
+  - mentaのメンターのxxxさんに修正案を教えてもらったのに、反映していない状態のはず。
 
 ## 教材
 
