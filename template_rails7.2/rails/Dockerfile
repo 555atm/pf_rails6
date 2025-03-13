@@ -11,7 +11,7 @@
 
 #### [2] ##########################################
 # FROM：使用するイメージ、rubyバージョン
-FROM ruby:3.1
+FROM ruby:3.3.5
 # 公式→https://hub.docker.com/_/ruby
 
 
@@ -21,20 +21,20 @@ FROM ruby:3.1
 # Rails 7ではWebpackerが標準では組み込まれなくなったので、yarnやnodejsのインストールが不要！！！！！！！！！！！！！！！！！！！！！！！
 
 # パッケージの更新(yum)
-RUN yum update -y && yum install -y \
-    git \
-    curl \
-    default-mysql-client \
-    vim
+# RUN yum update -y && yum install -y \
+#     git \
+#     curl \
+#     default-mysql-client \
+#     vim
 
 
 # Install base packages(apt)
-# RUN apt-get update -qq && \
-#     apt-get install --no-install-recommends -y  \
-#     git  \
-#     curl  \
-#     default-mysql-client  \
-#     vim
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y  \
+    git  \
+    curl  \
+    default-mysql-client  \
+    vim
 
 
 ########### コンテナにrbenvのインストールは不要 ############
@@ -51,13 +51,13 @@ RUN yum update -y && yum install -y \
 # RUN rbenv install 3.3.5
 # RUN rbenv global 3.3.5
 
-# Rails app lives here
+# Rails 
 WORKDIR /app
 COPY ./Gemfile Gemfile
 COPY ./Gemfile.lock Gemfile.lock
 RUN bundle install
 # COPY . /app
-COPY .entrypoint.sh /usr/bin/entrypoint.sh
+COPY ./entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
